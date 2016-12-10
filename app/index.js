@@ -6,7 +6,7 @@ import {Provider} from 'react-redux'
 import thunk from 'redux-thunk'
 import {routerReducer, syncHistoryWithStore} from 'react-router-redux'
 import * as reducers from 'redux/modules'
-import {hashHistory} from 'react-router'
+import {browserHistory} from 'react-router'
 
 // create store by combining all reducers from your reducers/modules, including
 // routing history. Compose lets you apply several store enhancers in a row
@@ -25,7 +25,7 @@ const store = createStore(
 // syncs history with your redux state tree. Allows you to look at your
 // history in relation to how state tree changes per route, and saves each
 // state tree in consecutive order of how the user changes routes
-const history = syncHistoryWithStore(hashHistory, store)
+const history = syncHistoryWithStore(browserHistory, store)
 
 // react-redux's Provider allows you to connect your redux store to your routes
 ReactDOM.render(
