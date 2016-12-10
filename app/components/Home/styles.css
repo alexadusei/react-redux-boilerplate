@@ -1,0 +1,13 @@
+/* CSS Module feature 'comnposes' allows us to inherit other CSS files. */
+
+.container {
+  composes: centeredContainer from 'sharedStyles/styles.css';
+}
+
+.title {
+  composes: largeHeader from 'sharedStyles/styles.css';
+}
+
+.slogan {
+  composes: subHeader from 'sharedStyles/styles.css';
+}
