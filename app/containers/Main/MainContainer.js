@@ -1,15 +1,10 @@
-import React, {PropTypes} from 'react'
+import React, {PropTypes, Component} from 'react'
 import {container, innerContainer} from './styles.css'
 import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux'
 import * as exampleActionCreators from 'redux/modules/example'
 
-const MainContainer = React.createClass({
-  propTypes: {
-    isExample: PropTypes.bool.isRequired,
-    error: PropTypes.string.isRequired,
-    exampleId: PropTypes.string.isRequired,
-  },
+class MainContainer extends Component {
   render () {
     return (
       <div className={container}>
@@ -19,7 +14,13 @@ const MainContainer = React.createClass({
       </div>
     )
   }
-})
+}
+
+MainContainer.propTypes = {
+  isExample: PropTypes.bool.isRequired,
+  error: PropTypes.string.isRequired,
+  exampleId: PropTypes.string.isRequired, 
+}
 
 function mapStateToProps ({example}) {
   return {
