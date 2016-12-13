@@ -71,5 +71,7 @@ const prodConfig = {
   plugins: [HtmlWebpackPluginConfig, productionPlugin]
 }
 
-export default Object.assign(
-  {}, base, isProduction === true ? prodConfig : devConfig)
+export default {
+  ...base, 
+  ...isProduction ? prodConfig : devConfig,
+}
