@@ -1,4 +1,3 @@
-import React from 'react'
 import ReactDOM from 'react-dom'
 import getRoutes from './config/routes'
 import {createStore, combineReducers, compose, applyMiddleware} from 'redux'
